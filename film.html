@@ -3,125 +3,446 @@
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]> <!-->
-<html>
+<html lang="en" class="no-js">
 <!--
 <![endif]-->
 
 <head>
-    <!-- TITLE OF SITE -->
-    <title>Mimi Maxmen</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mimi Maxmen</title>
+	<meta name="description" content="Effect inspiration for opening an image grid item." />
+	<meta name="keywords" content="image grid, effect, inspiration, css, javascript, animation, masonry" />
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:300,400,700|Lato:400,700|Oswald:400,700" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-    <!-- Main Style -->
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="sass/slider.css" rel="stylesheet">
-    <link href="sass/demo.css" rel="stylesheet">
-
-
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/grid.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/modernizr-custom.js"></script>
 </head>
 
-<body>
-  <div class="menu">
-    <div class="title">MENU</div>
-    <ul class="nav">
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./film.html">Film</a></li>
-      <li><a href="./theater.html">Theater</a></li>
-      <li><a href="./dance.html">Dance</a></li>
-      <li><a href="./opera.html">Opera</a></li>
-      <li><a href="#">CV</a></li>
-    </ul>
-  </div>
-  <h1>Mimi Maxmen</h1>
-  <h2>_Film</h2>
-    <div class="container">
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/010.jpg" alt="">
-          <figcaption class="caption">Early Bird Special </figcaption>
-        </figure>
-      </div>
+<body class="demo-2">
+	<div class="container">
+		<header>
+			<div class="open-overlay">
+				<img src="img/logo.png" alt="">
+			</div>
+		</header>
+		<!-- ***************** -->
+		<!-- Potentially cool idea: Keep the overlay navigation in a div like wrap so that it doesnt overlay the entire page -->
+		<!-- ***************** -->
+		<div class="overlay-navigation">
 
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/020.jpg" alt="">
-          <figcaption class="caption">The Lightkeepers</figcaption>
-        </figure>
-      </div>
+			<nav role="navigation">
+				<ul>
+					<li id="theater-panel" class="panel"><a href="./theater.html" data-content="To the beginning">Home</a></li>
+					<li id="theater-panel" class="panel"><a href="./theater.html" data-content="Take your seats">Theater</a></li>
+					<li id="film-panel" class="panel"><a href="./film.html" data-content="Rolling?">Film</a></li>
+					<li id="dance-panel" class="panel"><a href="./dance-opera.html" data-content="When the moon">Opera/Dance</a></li>
+					<li id="cv-panel" class="panel"><a href="./cv.html" data-content="Facts">CV</a></li>
+				</ul>
+			</nav>
+		</div>
 
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/021.jpg" alt="">
-          <figcaption class="caption">The Lightkeepers</figcaption>
-        </figure>
-      </div>
+		<div class="content">
+			<div class="portfolio-header">
+				<h2>Mimi Maxmen</h2>
+				<header>
+					<h1>Portfolio</h1>
+					<h3>Film</h3>
+				</header>
+			</div>
 
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/022.jpg" alt="">
-          <figcaption class="caption">The Lightkeepers </figcaption>
-        </figure>
-      </div>
+			<div class="grid">
+				<!-- <div class="grid__item" data-size="1280x857">
+					<a href="img/06.jpg" class="img-wrap"><img src="img/06.jpg" alt="img06" />
+						<div class="description description--grid">
+							<h3>The Big Valley</h3>
+							<p>Jessica Lange, Steven Moyer, Lee Majors, Bruce Dern, Lorraine Nicholson <em>&mdash; Daniel Adams</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div> -->
+				<div class="grid__item" data-size="1280x1280">
+					<a href="img/021.jpg" class="img-wrap"><img src="img/021.jpg" alt="img07" />
+						<div class="description description--grid">
+							<h3>The LightKeepers</h3>
+							<p>Richard Dreyfuss, Blythe Danner, Mamie Gummer, Tom Wisdom, Bruce Dern <em>&mdash; Daniel Adams</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x853">
+					<a href="img/043.jpg" class="img-wrap"><img src="img/043.jpg" alt="img08" />
+						<div class="description description--grid">
+							<h3>The Pretty Boys</h3>
+							<p>Dale Dymkoski, Erin Muir, Najarra Townsend <em>&mdash; Everett Lewis</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- <div class="grid__item" data-size="865x1280">
+					<a href="img/09.jpg" class="img-wrap"><img src="img/09.jpg" alt="img09" />
+						<div class="description description--grid">
+							<h3>Perestrokia</h3>
+							<p>F. Murray Abraham, Sam Robards, Ally Sheed <em>&mdash; Slava Tsuckerman</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div> -->
+				<div class="grid__item" data-size="1280x1280">
+					<a href="img/010.jpg" class="img-wrap"><img src="img/010.jpg" alt="img10" />
+						<div class="description description--grid">
+							<h3>Lucky Bastard</h3>
+							<p>Patrick Tatten, Timothy Cole <em>&mdash; Everett Lewis</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x850">
+					<a href="img/053.jpg" class="img-wrap"><img src="img/053.jpg" alt="img11" />
+						<div class="description description--grid">
+							<h3>Tumbleweeds</h3>
+							<p>Janet McTeer (Oscar nom.), Kimberly J. Brown, Jay O. Sanders<em>&mdash; Gavin O’Connor</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- <div class="grid__item" data-size="1280x853">
+					<a href="img/01.jpg" class="img-wrap"><img src="img/01.jpg" alt="img01" />
+						<div class="description description--grid">
+							<h3>THE SINGING DETECTIVE</h3>
+							<p>Robert Downey, Jr., Mel Gibson, Robin Wright-Penn, Adrian Brody, Jeremy Northam<em>&mdash; Keith Gordon</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div> -->
+				<div class="grid__item" data-size="958x1280">
+					<a href="img/045.jpg" class="img-wrap"><img src="img/045.jpg" alt="img02" />
+						<div class="description description--grid">
+							<h3>A MIDSUMMER NIGHT’S RAVE</h3>
+							<p>Andrew Keegan, Matt Czuchry, Sunny Maybrey<em>&mdash; Gil Cates, Jr.</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="837x1280">
+					<a href="img/025.jpg" class="img-wrap"><img src="img/025.jpg" alt="img03" />
+						<div class="description description--grid">
+							<h3>Luster</h3>
+							<p>Justic Herwick, Willie Garson<em>&mdash; Everett Lewis</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x961">
+					<a href="img/027.jpg" class="img-wrap"><img src="img/027.jpg" alt="img04" />
+						<div class="description description--grid">
+							<h3>THE MESMERIST</h3>
+							<p>Jessica Capshaw, Neil Patrick Harris <em>&mdash; Gil Cates, Jr.</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- <div class="grid__item" data-size="1280x1131">
+					<a href="img/05.jpg" class="img-wrap"><img src="img/05.jpg" alt="img05" />
+						<div class="description description--grid">
+							<h3>Corporate Affairs</h3>
+							<p>Breckin Meyer, Adam Scott, Monica Keena <em>&mdash; Dan Cohen</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div> -->
+				<!-- <div class="grid__item" data-size="1280x857">
+					<a href="img/06.jpg" class="img-wrap"><img src="img/06.jpg" alt="img06" />
+						<div class="description description--grid">
+							<h3>Turn of Faith</h3>
+							<p>Ray Mancini, Charles Durning, Tony Sirico <em>&mdash; Charles Jarrot</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div> -->
+				<div class="grid__item" data-size="1280x1280">
+					<a href="img/051.jpg" class="img-wrap"><img src="img/051.jpg" alt="img07" />
+						<div class="description description--grid">
+							<h3>Spent</h3>
+							<p>Jason London, Phill Lewis, James Park, Margaret Cho <em>&mdash; Gil Cates Jr.</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- <div class="grid__item" data-size="1280x853">
+					<a href="img/08.jpg" class="img-wrap"><img src="img/08.jpg" alt="img08" />
+						<div class="description description--grid">
+							<h3>The Hiding Place</h3>
+							<p>Timothy Bottoms, Kim Hunter <em>&mdash; Douglas Green</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div> -->
+				<!-- <div class="grid__item" data-size="865x1280">
+					<a href="img/09.jpg" class="img-wrap"><img src="img/09.jpg" alt="img09" />
+						<div class="description description--grid">
+							<h3>Frozen Stars</h3>
+							<p>Lana Parilla, James Dalesandro <em>&mdash; David Mathew Barnes</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div> -->
+				<div class="grid__item" data-size="1280x1280">
+					<a href="img/010.jpg" class="img-wrap"><img src="img/010.jpg" alt="img10" />
+						<div class="description description--grid">
+							<h3>Along The Way</h3>
+							<p>Michael Cade, Missy Crider<em>&mdash; Andrew Bowen</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x850">
+					<a href="img/009.jpg" class="img-wrap"><img src="img/009.jpg" alt="img11" />
+						<div class="description description--grid">
+							<h3>Early Bird Special</h3>
+							<p>TAnita Gillette, Max Perlich, Leslie Ann Warren<em>&mdash; Leonardo Da Vinci</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- <div class="grid__item" data-size="1280x853">
+					<a href="img/052.jpg" class="img-wrap"><img src="img/052.jpg" alt="img01" />
+						<div class="description description--grid">
+							<h3>TO CATCH A TIGER</h3>
+							<p>Caroline Aaron, Sivonna Hass <em>&mdash; Josephine R. Abady</em></p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div> -->
+			</div>
+			<!-- /grid -->
+			<div class="preview">
+				<button class="action action--close"><i class="fa fa-times"></i><span class="text-hidden">Close</span></button>
+				<div class="description description--preview"></div>
+			</div>
+			<!-- /preview -->
+		</div>
+		<!-- /content -->
 
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/023.jpg" alt="">
-          <figcaption class="caption">The Lightkeepers</figcaption>
-        </figure>
-      </div>
+	</div>
+	<!-- /container -->
+	<script src="js/jquery.js"></script>
+	<script src="js/velocity.js"></script>
+	<script src="js/velocity-ui.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/index.js"></script>
 
-      <!--- second round -->
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/027.jpg" alt="">
-          <figcaption class="caption">The Mesmerist </figcaption>
-        </figure>
-      </div>
+	<script>
+		(function() {
+			var support = { transitions: Modernizr.csstransitions },
+				// transition end event name
+				transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
+				transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+				onEndTransition = function( el, callback ) {
+					var onEndCallbackFn = function( ev ) {
+						if( support.transitions ) {
+							if( ev.target != this ) return;
+							this.removeEventListener( transEndEventName, onEndCallbackFn );
+						}
+						if( callback && typeof callback === 'function' ) { callback.call(this); }
+					};
+					if( support.transitions ) {
+						el.addEventListener( transEndEventName, onEndCallbackFn );
+					}
+					else {
+						onEndCallbackFn();
+					}
+				};
 
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/040.jpg" alt="">
-          <figcaption class="caption">The Pretty Boys </figcaption>
-        </figure>
-      </div>
+			new GridFx(document.querySelector('.grid'), {
+				imgPosition : {
+					x : -0.5,
+					y : 1
+				},
+				onOpenItem : function(instance, item) {
+					instance.items.forEach(function(el) {
+						if(item != el) {
+							var delay = Math.floor(Math.random() * 50);
+							el.style.WebkitTransition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), -webkit-transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
+							el.style.transition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
+							el.style.WebkitTransform = 'scale3d(0.1,0.1,1)';
+							el.style.transform = 'scale3d(0.1,0.1,1)';
+							el.style.opacity = 0;
+						}
+					});
+				},
+				onCloseItem : function(instance, item) {
+					instance.items.forEach(function(el) {
+						if(item != el) {
+							el.style.WebkitTransition = 'opacity .4s, -webkit-transform .4s';
+							el.style.transition = 'opacity .4s, transform .4s';
+							el.style.WebkitTransform = 'scale3d(1,1,1)';
+							el.style.transform = 'scale3d(1,1,1)';
+							el.style.opacity = 1;
 
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/041.jpg" alt="">
-          <figcaption class="caption">The Pretty Boys
-</figcaption>
-        </figure>
-      </div>
+							onEndTransition(el, function() {
+								el.style.transition = 'none';
+								el.style.WebkitTransform = 'none';
+							});
+						}
+					});
+				}
+			});
+		})();
+	</script>
+</body>
 
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/051.jpg" alt="">
-          <figcaption class="caption">Spent</figcaption>
-        </figure>
-      </div>
-
-      <div class="item">
-        <figure class="polaroid">
-          <img src="img/017.jpg" alt="">
-          <figcaption class="caption">Title</figcaption>
-        </figure>
-      </div>
-
-
-    </div>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/velocity.js"></script>
-    <script src="js/velocity-ui.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/menu.js"></script>
-  </body>
-  <html>
+</html>

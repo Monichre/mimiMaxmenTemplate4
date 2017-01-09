@@ -1,4 +1,34 @@
+
 (function() {
+    $(window).on('load', function(){
+      $('.effect').each(function(){
+        $(this).addClass('active');
+      })
+      $('.fade').addClass('active');
+    });
+
+
+
+    $('.cta').click(function(){
+      $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+      }, 1000);
+    });
+
+    $( '.js-input' ).keyup(function() {
+    if( $(this).val() ) {
+       $(this).addClass('not-empty');
+    } else {
+       $(this).removeClass('not-empty');
+    }
+  });
+
+  $(".hover").mouseleave(
+      function () {
+        $(this).removeClass("hover");
+      }
+    );
+
     // Navigation JS
 
     $('.open-overlay').click(function() {
@@ -62,5 +92,8 @@
       })
     }
     });
+
+
+
 
 })();
