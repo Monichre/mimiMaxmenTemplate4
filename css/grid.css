@@ -174,13 +174,18 @@
 .description--preview p {
 	font-size: 0.65em;
 	max-width: 100%;
-	color: white;
+	padding: 0.4em 0 0 0;
+	/*font-family: 'Lato', sans-serif;*/
+	font-family: 'Lucida Sans', Regular;
+    color: #c6c8c9;
 }
 
 .description--preview p em {
 	color: #c6c8c9;
 	display: block;
 	padding: 0.4em 0 0 0;
+	font-family: 'Frank Ruhl Libre', sans-serif;
+	font-variant: normal;
 }
 
 
@@ -207,7 +212,7 @@
 	padding: 0.15em 0;
 	white-space: nowrap;
 	opacity: 0;
-	color: #9d9d9d;
+	color: #cecfca;
 	-webkit-transition: -webkit-transform 1s, opacity 1s;
 	transition: transform 1s, opacity 1s;
 	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
@@ -249,8 +254,9 @@
 
 .details ul li:first-child {
 	font-weight: bold;
-	color: #909090;
+	color: #cecfca;
 }
+
 
 .icon {
 	font-family: 'camera-icons';
@@ -295,6 +301,17 @@
 .details .icon {
 	margin-right: 5px;
 	color: #ba2424;
+}
+.details ul li.portfolio-link .icon {
+	font-family: 'camera-icons';
+font-weight: normal;
+font-style: normal;
+font-variant: normal;
+line-height: 1;
+display: inline-block;
+vertical-align: middle;
+text-transform: none;
+
 }
 
 
